@@ -1,0 +1,32 @@
+{
+  "name": "el_ahorcado-1",
+  "version": "1.0.0",
+  "description": "El clásico videojuego del ahorcado para la web, con un estilo más moderno.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scan": "npx tailwindcss -i ./src/css/config.css -o ./src/css/styles.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoseBeltre/el_ahorcado.git"
+  },
+  "keywords": [
+    "hangman"
+  ],
+  "author": "Jose L. Beltre",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoseBeltre/el_ahorcado/issues"
+  },
+  "homepage": "https://github.com/JoseBeltre/el_ahorcado#readme",
+  "devDependencies": {
+    "prettier": "^3.3.2",
+    "prettier-plugin-tailwindcss": "^0.6.5",
+    "tailwindcss": "^3.4.4"
+  },
+  "prettier":{
+    "plugins": ["prettier-plugin-tailwindcss"]
+  }
+  
+}
