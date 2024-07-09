@@ -7,12 +7,12 @@
     @apply bg-tile-light dark:bg-tile-dark rounded-md border border-black/15 dark:border-[rgba(172,172,172,0.05)] shadow-tileLight dark:shadow-tileDark w-8 h-12 sm:w-10  flex justify-center items-center font-bold text-base sm:text-xl ;
   }
   .key{
-    @apply bg-key-light dark:bg-key-dark text-keyLetter-light dark:text-keyLetter-dark h-14 font-bold shadow-key rounded-md cursor-pointer  flex justify-center items-center basis-14;
+    @apply bg-key-light dark:bg-key-dark text-keyLetter-light dark:text-keyLetter-dark h-14 font-bold shadow-key rounded-md cursor-pointer  flex justify-center items-center basis-14 hover:bg-gray-50/70 dark:hover:bg-key-dark/60 transition-colors;
   }
   .guessed-letter{
-    @apply bg-green-400 text-white;
+    @apply bg-green-400 text-white hover:text-white hover:bg-green-400 cursor-default;
   }
   .wrong-letter{
-    @apply bg-red-400 text-white;
+    @apply bg-red-400 text-white hover:text-white hover:bg-red-400 cursor-default;
   }
 }
