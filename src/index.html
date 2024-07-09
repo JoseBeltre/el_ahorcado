@@ -11,10 +11,88 @@
       rel="stylesheet"
     />
     <!--  -->
+    <link rel="shortcut icon" href="./imgs/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/styles.css">
     <title>The Hangman</title>
   </head>
-  <body class="font-poppins">
-    <h1 class="text-red-900 flex flex-col text-xl">The Hangman Game</h1>
+  <body class="font-poppins bg-background-light dark:bg-background-dark min-h-screen">
+    <main class="h-screen w-screen sm:w-fit m-auto flex justify-center items-center flex-col gap-2">
+      <!-- Game Board -->
+      <!-- Hangman -->
+      <div class="max-w-64 mt-10 sm:mt-0">
+        <img
+          class="w-full mx-auto"
+          src="./svgs/hangman-0.svg"
+          alt="Hangman 0"
+        />
+      </div>
+      <!-- Clue -->
+       <p class="text-black/60 dark:text-white/30 leading-4 text-center text-xs sm:text-base"><span class="text-accent-light font-bold">CLUE:</span> A word used to describe a relationship.</p>
+      <!-- Word Tiles -->
+      <div class="word-container flex flex-wrap justify-center gap-1 ">
+        <!-- Each letter will be represented by a div with the class "tile" -->
+        <!-- The "letter" class will be used to style the letter tiles -->
+        <!-- The "hidden" class will be used to hide the letter tiles that are not yet guessed -->
+        <!-- The "guessed" class will be used to highlight the guessed letter tiles  -->
+         <div class="tile guessed-letter">A</div>
+         <div class="tile guessed-letter">R</div>
+         <div class="tile"></div>
+         <div class="tile"></div>
+         <div class="tile guessed-letter">N</div>
+         <div class="tile guessed-letter">T</div>
+         <div class="tile guessed-letter">I</div>
+         <div class="tile"></div>
+         <div class="tile"></div>
+         <div class="tile"></div>
+         <div class="tile"></div>
+         <div class="tile"></div>
+         <div class="tile"></div>
+         <div class="tile"></div>
+      </div>
+      <!-- Keyboard -->
+       <div class="keyboard  flex flex-col gap-1 w-full px-1 max-w-[600px] text-base sm:text-xl mt-auto sm:mt-5">
+        <div class="flex  gap-1 w-full justify-center">
+          <div class="key">Q</div>
+          <div class="key ">W</div>
+          <div class="key ">E</div>
+          <div class="key guessed-letter">R</div>
+          <div class="key guessed-letter">T</div>
+          <div class="key ">Y</div>
+          <div class="key ">U</div>
+          <div class="key guessed-letter">I</div>
+          <div class="key ">O</div>
+          <div class="key ">P</div>
+        </div>
+        <div class="flex  gap-1 w-full justify-center">
+          <div class="key guessed-letter">A</div>
+          <div class="key ">S</div>
+          <div class="key wrong-letter">D</div>
+          <div class="key ">F</div>
+          <div class="key ">G</div>
+          <div class="key ">H</div>
+          <div class="key wrong-letter">J</div>
+          <div class="key ">K</div>
+          <div class="key wrong-letter">L</div>
+          <div class="key ">Ñ</div>
+        </div>
+        <div class="flex justify-center gap-1 w-full ">
+          <!-- <div class="key flex flex-grow"></div> -->
+           <div class="key flex flex-grow basis-14"></div>
+          <div class="key ">Z</div>
+          <div class="key ">X</div>
+          <div class="key ">C</div>
+          <div class="key ">V</div>
+          <div class="key ">B</div>
+          <div class="key guessed-letter">N</div>
+          <div class="key ">M</div>
+          <div class="key flex flex-grow basis-14"></div>
+
+        </div>
+
+
+
+       </div>
+    </main>
+    <script src="./js/index.js"></script>
   </body>
 </html>
