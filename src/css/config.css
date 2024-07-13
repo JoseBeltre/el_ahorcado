@@ -4,7 +4,7 @@
 
 @layer components {
   .tile {
-    @apply dark:border-[rgba(172, 172, 172, 0.05)] flex h-12 w-8 items-center justify-center rounded-md border border-black/15 bg-tile-light text-base font-bold shadow-tileLight sm:w-10 sm:text-xl dark:bg-tile-dark dark:shadow-tileDark;
+    @apply dark:border-[rgba(172,172,172,0.05)] flex h-12 w-8 items-center justify-center rounded-md border border-black/15 bg-tile-light text-base font-bold shadow-tileLight sm:w-10 sm:text-xl dark:bg-tile-dark dark:shadow-tileDark transition-colors;
   }
 
   .key {
@@ -12,10 +12,10 @@
   }
 
   .guessed-letter {
-    @apply cursor-default bg-green-400 text-white hover:bg-green-400 hover:text-white;
+    @apply cursor-default bg-green-400 text-white hover:bg-green-400 hover:text-white transition-colors;
   }
 
   .wrong-letter {
-    @apply cursor-default bg-red-400 text-white hover:bg-red-400 hover:text-white;
+    @apply cursor-default bg-red-400 text-white hover:bg-red-400 hover:text-white transition-colors;
   }
 }
