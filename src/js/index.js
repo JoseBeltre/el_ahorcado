@@ -9,11 +9,18 @@ let todayWord;
 let attempts = 0;
 let tiles;
 
+// Function that cure the word obtained from the API
+function cureWord(word) {
+  // The received word is a array
+  word = word[0]
+  // We normalize the word to remove accents and diacritics
+  return word.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
 
 //Function to generate the word tiles
 async function generateWordTiles(wordContainer) {
-  todayWord = await getWord();
-  todayWord = todayWord[0]
+  const word = await getWord();
+  todayWord = cureWord(word);
   console.log('Today\'s Word:', todayWord);
   todayWord.split("").forEach(() => {
     let tile = document.createElement("div");
