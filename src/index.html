@@ -57,14 +57,14 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body
-    class="h-screen max-h-screen bg-background-light font-poppins dark:bg-background-dark"
+    class="h-dvh max-h-dvh bg-background-light font-poppins dark:bg-background-dark"
   >
     <main
-      class="m-auto flex h-screen max-h-screen w-screen flex-col items-center justify-center gap-2"
+      class="m-auto flex h-dvh max-h-dvh w-screen flex-col items-center justify-center gap-2 "
     >
       <!-- Game Board -->
       <!-- Hangman -->
-      <div class="mt-10 max-w-80 sm:mt-0">
+      <div class="mt-4 max-w-80 sm:mt-0">
         <img
           class="hangman mx-auto w-full"
           src="./svgs/hangman-0.svg"
@@ -74,13 +74,13 @@
       <!-- Clue -->
 
       <p
-        class="text-center text-xs leading-4 text-black/60 sm:text-base dark:text-white/30"
+        class="text-center text-xs leading-4 text-black/60 sm:text-base dark:text-white/30 px-2"
       >
         <span class="font-bold text-accent-light">PISTA:</span> Comienza a
         escribir para adivinar la palabra.
       </p>
       <!-- Word Tiles -->
-      <div class="word-container flex flex-wrap justify-center gap-1">
+      <div class="word-container flex flex-wrap justify-center gap-1 px-2">
         <!-- Each letter will be represented by a div with the class "tile" -->
         <!-- The "letter" class will be used to style the letter tiles -->
         <!-- The "hidden" class will be used to hide the letter tiles that are not yet guessed -->

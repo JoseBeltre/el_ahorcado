@@ -724,6 +724,10 @@ video {
   margin-top: auto;
 }
 
+.mt-4 {
+  margin-top: 1rem;
+}
+
 .flex {
   display: flex;
 }
@@ -732,12 +736,12 @@ video {
   display: none;
 }
 
-.h-screen {
-  height: 100vh;
+.h-dvh {
+  height: 100dvh;
 }
 
-.min-h-screen {
-  min-height: 100vh;
+.max-h-dvh {
+  max-height: 100dvh;
 }
 
 .w-full {
@@ -796,6 +800,11 @@ video {
 .px-1 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .text-center {
