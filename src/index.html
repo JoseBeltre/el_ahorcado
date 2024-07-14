@@ -57,14 +57,14 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body
-    class="h-dvh max-h-dvh bg-background-light font-poppins dark:bg-background-dark"
+    class="h-dvh max-h-dvh bg-background-light font-poppins dark:bg-background-dark overflow-hidden"
   >
     <main
-      class="m-auto flex h-dvh max-h-dvh w-screen flex-col items-center justify-center gap-2 "
+      class="m-auto flex h-dvh max-h-dvh w-screen flex-col items-center justify-center gap-2 overflow-hidden"
     >
       <!-- Game Board -->
       <!-- Hangman -->
-      <div class="mt-4 max-w-80 sm:mt-0">
+      <div class="mt-4 max-w-80 sm:mt-0 ">
         <img
           class="hangman mx-auto w-full"
           src="./svgs/hangman-0.svg"
@@ -126,6 +126,9 @@
           <div class="key">M</div>
           <div class="key flex flex-grow basis-14"></div>
         </div>
+      </div>
+      <div class="modal-container invisible transition-all">
+        
       </div>
     </main>
     <script type="module" src="./js/index.js"></script>
