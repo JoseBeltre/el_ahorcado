@@ -1,5 +1,6 @@
 import { getWord } from "./api.js";
 import { createModal } from "./modal.js";
+import { storage } from "./user-info.js";
 
 // Getting all the keys for the keyboard
 const keys = document.querySelectorAll(".key");
@@ -15,7 +16,7 @@ let gameInfo ={
   wrongLetters: [],
   guessedLetters: [],
 }
-
+let userInfo = storage.get();
 // Function that cure the word obtained from the API
 function cureWord(word) {
   // The received word is a array
@@ -59,15 +60,33 @@ function handleKeys(letter, key) {
       }
       if (guessedAllLetters()) {
         gameInfo.win = true;
+        userInfo.wins++;
+        userInfo.gamesPlayed++;
+        userInfo.currentStreak.words.push(gameInfo.word);
+        userInfo.currentStreak.streak++;
+        userInfo.wordsGuessed.push(gameInfo.word)
+        storage.update(userInfo);
         createModal(gameInfo, modalContainer)
       }
     } else {
+      gameInfo.attempts++;
       key.classList.add("wrong-letter");
       image.src = "./svgs/hangman-" + gameInfo.attempts + ".svg";
       gameInfo.wrongLetters.push(letter.toUpperCase());
-      gameInfo.attempts++;
       if (gameInfo.attempts == 6) {
         gameInfo.win = false;
+        userInfo.losses++;
+        userInfo.gamesPlayed++;
+        if (userInfo.currentStreak.streak > userInfo.longestStreak.streak) {
+          userInfo.longestStreak.streak = userInfo.currentStreak.streak;
+          userInfo.longestStreak.words = userInfo.currentStreak.words;
+          userInfo.currentStreak = {
+            words: [],
+            streak: 0,
+          };
+        }
+        userInfo.wordsFailed.push(gameInfo.word)
+        storage.update(userInfo)
       createModal(gameInfo, modalContainer)
       }
     }
