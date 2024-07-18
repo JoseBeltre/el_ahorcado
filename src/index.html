@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -52,19 +52,39 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <!-- Importing Google Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!--  -->
     <link rel="shortcut icon" href="./imgs/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="./css/styles.css" />
-  </head>
+</head>
   <body
     class="h-dvh max-h-dvh bg-background-light font-poppins dark:bg-background-dark overflow-hidden"
   >
+  <header class="flex  p-2 sm:p-4  gap-1 sm:gap-3 absolute text-xs">
+    <div id="toggle-theme-btn" class="flex justify-center items-center dark:bg-[#4C3473] p-1.5 sm:p-2 sm:px-4 gap-1 rounded-full font-bold text-keyLetter-light dark:font-semibold tracking-wide uppercase dark:text-white bg-[#ffd84a] shadow-sm cursor-pointer hover:bg-[#4C3473] hover:text-white dark:hover:bg-[#ffd84a] transition-colors">
+      <span class="material-symbols-outlined dark:hidden">
+        light_mode
+      </span>
+      <span class="hidden dark:hidden sm:inline">Light Mode</span>
+      <span class="material-symbols-outlined hidden dark:inline ">
+        dark_mode
+      </span>
+      <span class="hidden dark:sm:inline ">Dark Mode</span>
+    </div>
+    <div class=" flex justify-center items-center dark:bg-key-dark p-1.5 sm:p-2 sm:px-4 gap-1 rounded-full font-bold text-keyLetter-light dark:font-semibold tracking-wide uppercase dark:text-keyLetter-dark bg-key-light shadow-sm cursor-pointer hover:bg-[#fcfcfc] transition-colors">
+      <span class="material-symbols-outlined">
+        bar_chart
+        </span>
+        <span class="hidden sm:inline">Estadisticas</span>
+    </div>
+  </header>
     <main
       class="m-auto flex h-dvh max-h-dvh w-screen flex-col items-center justify-center gap-2 overflow-hidden"
     >
       <!-- Game Board -->
       <!-- Hangman -->
-      <div class="mt-4 max-w-80 sm:mt-0 ">
+      <div class="mt-16 w-52 sm:w-60 md:w-80 sm:mt-0 ">
         <img
           class="hangman mx-auto w-full"
           src="./svgs/hangman-0.svg"

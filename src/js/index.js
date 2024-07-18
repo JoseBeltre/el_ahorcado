@@ -1,6 +1,12 @@
 import { getWord } from "./api.js";
 import { createModal } from "./modal.js";
 import { storage } from "./user-info.js";
+import { theme } from "./theme.js";
+
+theme.set()
+document.getElementById("toggle-theme-btn").addEventListener("click", () => {
+  theme.toggle()
+})
 
 // Getting all the keys for the keyboard
 const keys = document.querySelectorAll(".key");
