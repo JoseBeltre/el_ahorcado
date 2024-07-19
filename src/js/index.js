@@ -1,5 +1,5 @@
 import { getWord } from "./api.js";
-import { createModal } from "./modal.js";
+import { modal } from "./modal.js";
 import { storage } from "./user-info.js";
 import { theme } from "./theme.js";
 
@@ -72,7 +72,7 @@ function handleKeys(letter, key) {
         userInfo.currentStreak.streak++;
         userInfo.wordsGuessed.push(gameInfo.word)
         storage.update(userInfo);
-        createModal(gameInfo, modalContainer)
+        modal.results(gameInfo, modalContainer)
       }
     } else {
       gameInfo.attempts++;
@@ -93,7 +93,7 @@ function handleKeys(letter, key) {
         }
         userInfo.wordsFailed.push(gameInfo.word)
         storage.update(userInfo)
-      createModal(gameInfo, modalContainer)
+      modal.results(gameInfo, modalContainer)
       }
     }
   
@@ -134,3 +134,6 @@ document.addEventListener("keydown", (e) => {
     handleKeys(letter, key);
   }
 });
+
+
+document.querySelector('.stats-btn').addEventListener("click", () => modal.stats(userInfo, modalContainer));

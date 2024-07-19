@@ -16,7 +16,6 @@ export const storage = {
         },
         wordsGuessed: [],
         wordsFailed: [],
-        theme: undefined,
       };
       window.localStorage.setItem("userInfo", JSON.stringify(userInfo));
       return userInfo;

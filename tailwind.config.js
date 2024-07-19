@@ -8,7 +8,7 @@ module.exports = {
         poppins: ["Poppins", "system-ui", "Arial", "sans-serif"],
       },
       colors: {
-        primary: "#3498db",
+        primary: "#76C7B3",
         secondary: "#f1c40f",
         tertiary: "#e74c3c",
         quaternary: "#9b59b6",
